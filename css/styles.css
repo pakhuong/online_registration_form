@@ -1,0 +1,53 @@
+/* =================================
+  Base Rules
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  color: #495d70;
+}
+
+h1 {
+  font-size: 1.25em;
+}
+
+/* =================================
+  Modular Rules
+==================================== */
+
+.centered-text {
+  text-align: center;
+}
+
+.main-header {
+  background: #2d3945;
+  color: #f1f2f3;
+  font-weight: bold;
+  padding-bottom: 22.5px;
+  padding-top: 22.5px;
+}
+
+.main-header h1 {
+  margin: 0;
+}
+
+.title {
+  margin: 1.5em 0;
+}
+
+.title h1 {
+  font-size: 1.15em;
+}
+
+.title h1,
+legend {
+  color: #2d3945;
+}
+
+.title p {
+  color: #9da3a8;
+}
