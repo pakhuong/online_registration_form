@@ -2,52 +2,282 @@
   Base Rules
 ==================================== */
 
-* {
-  box-sizing: border-box;
+*
+{
+    box-sizing: border-box;
 }
 
-body {
-  font-family: "Merriweather", serif;
-  color: #495d70;
+body
+{
+    font-family: 'Merriweather', serif;
+
+    color: #495d70;
 }
 
-h1 {
-  font-size: 1.25em;
+button
+{
+    font-size: 1.15em;
+    font-weight: bold;
+    font-style: normal;
+
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 19px 39px 18px 39px;
+
+    text-align: center;
+
+    color: #fff;
+    border: 1px solid #4ebbb5;
+    border-radius: 5px;
+    background-color: #4ebbb5;
+}
+
+fieldset
+{
+    padding: 0;
+
+    border: none;
+}
+
+form
+{
+    max-width: 600px;
+    margin: 10px auto;
+
+    border-top: 4px solid #2d3945;
+}
+
+h1
+{
+    font-size: 1.25em;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+select,
+textarea
+{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+
+    -webkit-transition: border-color 1s ease;
+       -moz-transition: border-color 1s ease;
+         -o-transition: border-color 1s ease;
+            transition: border-color 1s ease;
+
+    border: 2px solid rgba(70, 105, 139, 0);
+    border-radius: 5px;
+    outline: 0;
+    background-color: #eff0f1;
+}
+
+input[type='checkbox'],
+input[type='radio']
+{
+    display: none;
+
+    margin-bottom: 8px;
+}
+
+legend
+{
+    font-weight: bold;
+
+    margin-bottom: .5em;
+}
+
+/* =================================
+  Layout Rules
+==================================== */
+
+.fieldset-container
+{
+    margin-top: 3px;
+    margin-bottom: 1.25em;
+    padding-top: 1.25em;
+
+    border-top: 2px solid #2d3945;
+}
+
+.form-container
+{
+    padding: 0 15px;
+}
+
+label
+{
+    display: block;
+
+    margin-top: 1.25em;
+    margin-bottom: .75em;
+}
+
+label.checkbox-radio
+{
+    display: inline-block;
+
+    margin: 0 0 10px 0;
 }
 
 /* =================================
   Modular Rules
 ==================================== */
 
-.centered-text {
-  text-align: center;
+.centered-text
+{
+    text-align: center;
 }
 
-.main-header {
-  background: #2d3945;
-  color: #f1f2f3;
-  font-weight: bold;
-  padding-bottom: 22.5px;
-  padding-top: 22.5px;
+input[type='checkbox'] + label,
+input[type='radio'] + label
+{
+    padding-left: 1.75em;
 }
 
-.main-header h1 {
-  margin: 0;
+input[type='checkbox'] + label
+{
+    background: url(../img/checkbox_unchecked.png) no-repeat;
 }
 
-.title {
-  margin: 1.5em 0;
+input[type='checkbox']:checked + label
+{
+    background: url(../img/checkbox_checked.png) no-repeat;
 }
 
-.title h1 {
-  font-size: 1.15em;
+input[type='radio'] + label
+{
+    background: url(../img/radio_unchecked.png) no-repeat;
+}
+
+input[type='radio']:checked + label
+{
+    background: url(../img/radio_checked.png) no-repeat;
+}
+
+input:focus,
+select:focus,
+textarea:focus
+{
+    border: 2px solid rgba(70, 105, 139, 1);
+}
+
+.main-header
+{
+    font-weight: bold;
+
+    padding-top: 22.5px;
+    padding-bottom: 22.5px;
+
+    color: #fff;
+    background: #2d3945;
+}
+
+.main-header h1
+{
+    margin: 0;
+}
+
+.main-footer
+{
+    font-size: .95em;
+    font-style: italic;
+
+    margin-bottom: .5em;
+
+    color: #9da3a8;
+}
+
+.title
+{
+    margin: 1.5em 0 2.25em 0;
 }
 
 .title h1,
-legend {
-  color: #2d3945;
+legend
+{
+    font-size: 1.15em;
+
+    color: #2d3945;
 }
 
-.title p {
-  color: #9da3a8;
+.title p
+{
+    color: #9da3a8;
+}
+
+::-webkit-input-placeholder
+{
+    font-size: .85em;
+    font-style: italic;
+    /* Chrome/Opera/Safari */
+
+    text-align: right;
+}
+
+::-moz-placeholder
+{
+    font-size: .85em;
+    font-style: italic;
+    /* Firefox 19+ */
+
+    text-align: right;
+}
+:-ms-input-placeholder
+{
+    font-size: .85em;
+    font-style: italic;
+    /* IE 10+ */
+
+    text-align: right;
+}
+:-moz-placeholder
+{
+    font-size: .85em;
+    font-style: italic;
+    /* Firefox 18- */
+
+    text-align: right;
+}
+
+#zip
+{
+    width: 150px;
+}
+
+/* =================================
+  Medias Querries
+==================================== */
+
+@media (min-width: 650px)
+{
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    select
+    {
+        width: 70%;
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
+
+    label
+    {
+        float: left;
+
+        width: 30%;
+    }
+
+    label.newsletter
+    {
+        float: none;
+
+        width: auto;
+    }
+
+    .fieldset-container
+    {
+        padding-top: 3em;
+    }
 }
